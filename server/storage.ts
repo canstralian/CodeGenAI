@@ -31,11 +31,11 @@ export class MemStorage implements IStorage {
   private seedModelConfigs() {
     const defaultConfigs = [
       {
-        name: 'gemini-2.0-pro',
-        description: 'Google\'s Gemini 2.0 Pro model for advanced code generation',
+        name: 'gemini-pro',
+        description: 'Google\'s Gemini Pro model for advanced code generation',
         configuration: { 
           model_type: 'gemini',
-          version: '2.0-pro',
+          version: 'pro',
           api_provider: 'google'
         },
         isActive: 1

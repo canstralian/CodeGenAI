@@ -4,7 +4,7 @@ import { apiRequest } from "./queryClient";
 export type ProgrammingLanguage = 'python' | 'java' | 'cpp' | 'javascript';
 
 // Define the supported models
-export type ModelType = 'gemini-2.0-pro' | 'transformer' | 'codebert' | 'gpt-mini';
+export type ModelType = 'gemini-pro' | 'transformer' | 'codebert' | 'gpt-mini';
 
 // Interface for code generation request
 export interface CodeGenerationRequest {

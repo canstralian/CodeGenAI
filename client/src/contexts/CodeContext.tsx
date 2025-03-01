@@ -34,7 +34,7 @@ export const CodeProvider = ({ children }: CodeProviderProps) => {
   const { toast } = useToast();
   const [prompt, setPrompt] = useState('');
   const [language, setLanguage] = useState<ProgrammingLanguage>('python');
-  const [model, setModel] = useState<ModelType>('gemini-2.0-pro');
+  const [model, setModel] = useState<ModelType>('gemini-pro');
   const [generatedCode, setGeneratedCode] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);

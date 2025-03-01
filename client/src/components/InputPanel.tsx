@@ -116,7 +116,7 @@ Example: Write a function that takes a list of numbers and returns their sum and
                   <SelectValue placeholder="Gemini 2.0 Pro" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="gemini-2.0-pro">Gemini 2.0 Pro</SelectItem>
+                  <SelectItem value="gemini-pro">Gemini Pro</SelectItem>
                   <SelectItem value="transformer">Transformer</SelectItem>
                   <SelectItem value="codebert">CodeBERT</SelectItem>
                   <SelectItem value="gpt-mini">GPT-Mini</SelectItem>

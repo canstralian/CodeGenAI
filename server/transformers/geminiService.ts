@@ -12,7 +12,7 @@ export interface CodeGenerationResult {
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 // Get the gemini-2.0-pro model
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-pro" });
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 /**
  * Generates a prompt customized for code generation based on language
@@ -62,21 +62,21 @@ export async function generateCodeWithGemini(
 
     // Extract code from the response
     const code = cleanupGeneratedCode(text);
-    
+
     return {
       code,
       language,
-      model: "gemini-2.0-pro",
+      model: "gemini-pro",
       executionTime
     };
   } catch (error) {
     console.error("Error generating code with Gemini:", error);
-    
+
     // Return a fallback response
     return {
       code: `// Error generating code: ${(error as Error).message}\n// Please try again with a different prompt`,
       language,
-      model: "gemini-2.0-pro",
+      model: "gemini-pro",
       executionTime: Date.now() - startTime
     };
   }
@@ -91,9 +91,9 @@ export async function generateCodeWithGemini(
 function cleanupGeneratedCode(text: string): string {
   // Remove markdown code blocks if present
   let code = text.replace(/```[\w]*\n/g, "").replace(/```$/g, "");
-  
+
   // Trim whitespace
   code = code.trim();
-  
+
   return code;
 }
